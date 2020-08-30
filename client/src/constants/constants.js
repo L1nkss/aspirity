@@ -1,6 +1,6 @@
 export const TYPE_OPTIONS = [
-    "Running",
-    "Bicycle",
-    "Skiing",
-    "Walking",
+  'Running',
+  'Bicycle',
+  'Skiing',
+  'Walking',
 ];

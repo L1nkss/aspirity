@@ -1,16 +1,14 @@
-import { connect } from "react-redux";
-import { Operation } from "../../redux/reducers/user-activity/operation/operation";
-import App from "./app";
-
+import { connect } from 'react-redux';
+import { Operation } from '../../redux/reducers/user-activity/operation/operation';
+import App from './app';
 
 const mapStateToProps = (state) => ({
-    loading: state.loading,
-    data: state.userActivity
+  loading: state.loading,
+  data: state.userActivity,
 });
 
 const mapDispatchToProps = (dispatch) => ({
-   loadUserActivities: () => dispatch(Operation.loadData())
+  loadUserActivities: () => dispatch(Operation.loadData()),
 });
-
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

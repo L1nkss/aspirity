@@ -13,7 +13,7 @@ const api = {
 
             return data;
         } catch (e) {
-            throw new Error();
+            return 500;
         }
     }
 };

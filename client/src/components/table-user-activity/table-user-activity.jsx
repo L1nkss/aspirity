@@ -6,6 +6,7 @@ import TableDropdown from "../dropdown/dropdown";
 import {TYPE_OPTIONS } from "../../constants/constants";
 import { css } from 'glamor'
 import ActivityChart from "../chart/chart";
+import ErrorDisplay from "../error/error";
 
 const TableUserActivity = (props) => {
     const tableClass = css({
@@ -82,6 +83,10 @@ const TableUserActivity = (props) => {
                changeHandler={changeHandler}
                distance={element.distance} />
         });
+    }
+    
+    if (props.isError) {
+        return <ErrorDisplay />
     }
 
     return (

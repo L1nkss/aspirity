@@ -12,9 +12,12 @@ export const Operation = {
         dispatch(getUserActivityRequest());
         try {
             const response = await api.sendRequest('api/activities');
+            if (response === 500) {
+                throw new Error();
+            }
             dispatch(getUserActivitySuccess(response.data));
         } catch (e) {
-            dispatch(getUserActivityError);
+            dispatch(getUserActivityError());
         }
     },
 

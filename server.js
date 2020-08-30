@@ -2,9 +2,9 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const router = require('./routes/routes');
-const config = require('./config/config');
+require('dotenv').config();
 
-const mongoConnect = config.MONGO;
+const mongoConnect = process.env.MONGO;
 
 const app = express();
 
@@ -31,4 +31,4 @@ async function start() {
 
 start();
 
-app.listen(config.PORT || 3000, () => console.log('Сервер запущен'));
+app.listen(5000, () => console.log('Сервер запущен'));

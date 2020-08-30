@@ -16,3 +16,4 @@ public/bundle.js
 public/bundle.js.map
 config/
 client/public/bundle.js
+.env

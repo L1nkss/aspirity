@@ -45,9 +45,18 @@ const TableUserActivity = (props) => {
         const values = sortableData.sort((a, b) => {
             const direction = sortDirection[type] === "asc";
 
-            if (a[type] < b[type]) {
+            // Присваиваем значение из объекта в новые переменные
+            let first = a[type];
+            let next = b[type];
+
+            if (type === "date") {
+                first = new Date(first);
+                next = new Date(next);
+            }
+
+            if (first < next) {
                 return direction ? -1 : 1;
-            } else if (a[type] > b[type]) {
+            } else if (first > next) {
                 return direction ? 1 : -1;
             } else {
                 return 0;

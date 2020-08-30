@@ -20,6 +20,8 @@
     "axios": "^0.20.0",
     "bootstrap": "^4.5.2",
     "glamor": "^2.20.40",
+    "highcharts": "^8.2.0",
+    "highcharts-react-official": "^3.0.0",
     "moment": "^2.27.0",
     "react": "^16.13.1",
     "react-datepicker": "^3.1.3",

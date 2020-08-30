@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
-import {Table} from "reactstrap";
+import {Button, Table} from "reactstrap";
 import TableCell from "./components/table-cell";
 import Loader from "../spinner/spinner";
 import TableDropdown from "../dropdown/dropdown";
 import {TYPE_OPTIONS } from "../../constants/constants";
 import { css } from 'glamor'
+import ActivityChart from "../chart/chart";
 
 const TableUserActivity = (props) => {
     const tableClass = css({
@@ -98,7 +99,13 @@ const TableUserActivity = (props) => {
                     Distance
                 </th>
                 <th className="w-25">Comment</th>
-                <th className={`${tableHeaderClassButtons}`} />
+                <th className={`${tableHeaderClassButtons}`} >
+                    <ActivityChart data={data} render={(callback) => (
+                        <Button outline size="sm" color="info" className="mr-2" onClick={callback}>
+                            Show chart
+                        </Button>
+                    )} />
+                </th>
             </tr>
             </thead>
             <tbody>

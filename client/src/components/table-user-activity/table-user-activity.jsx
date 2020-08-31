@@ -9,6 +9,7 @@ import ActivityChart from '../activity-chart/activity-chart';
 import ErrorDisplay from '../error-display/error-display';
 
 const TableUserActivity = (props) => {
+  // Стили
   const tableClass = css({
     width: '768px',
   });
@@ -21,6 +22,13 @@ const TableUserActivity = (props) => {
   const tableHeaderClassButtons = css({
     width: '15%',
   });
+  const tableHeaderClassDate = css({
+    width: '20%',
+    ':hover': {
+      cursor: 'pointer',
+    },
+  });
+  //
   const { data } = props;
   const [sortableData, setSortableData] = useState(null);
   const [sortDirection, setSortDirection] = useState({
@@ -95,7 +103,7 @@ const TableUserActivity = (props) => {
       <thead>
         <tr>
           <th
-            className={`${tableHeaderClass}`}
+            className={`${tableHeaderClassDate}`}
             onClick={() => sort('date')}
           >
             Date

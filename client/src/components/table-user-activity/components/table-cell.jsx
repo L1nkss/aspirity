@@ -2,7 +2,12 @@ import React from 'react';
 import { Button } from 'reactstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEdit, faTrash } from '@fortawesome/free-solid-svg-icons';
+import { css } from 'glamor';
 import FieldModal from '../../field-modal/field-modal';
+
+const commentCellClass = css({
+  wordBreak: 'break-all',
+});
 
 const TableCell = (props) => {
   const {
@@ -32,7 +37,7 @@ const TableCell = (props) => {
         {' '}
         km
       </td>
-      <td className="align-middle">{comment}</td>
+      <td className={`${commentCellClass} align-middle`}>{comment}</td>
       <td>
         <FieldModal
           submitHandler={changeActivity}

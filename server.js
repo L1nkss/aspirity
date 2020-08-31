@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const router = require('./routes/routes');
 require('dotenv').config();
 
-const mongoConnect = process.env.MONGO;
+const mongoConnect = "mongodb+srv://sergey:123123Q@cluster0.al3ss.azure.mongodb.net/Aspirity?retryWrites=true&w=majority";
 
 const app = express();
 

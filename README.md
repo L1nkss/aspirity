@@ -1,4 +1,4 @@
-# Aspitiry test
+# Aspirity test
 
 
 #### Технологии
